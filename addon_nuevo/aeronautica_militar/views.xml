@@ -1,0 +1,19 @@
+<odoo>
+    <record model="ir.ui.view" id="view_tree">
+        <field name="name">view.tree</field>
+        <field name="model">aeronautica.militar</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_view_todo" model="ir.actions.act_window">
+        <field name="name">Lista aviones</field>
+        <field name="res_model">aeronautica.militar</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_todo" name="Mi app"/>
+    <menuitem id="menu_todo_aviones" parent="menu_todo" action="action_view_todo"/>
+</odoo>
